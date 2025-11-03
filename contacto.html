@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Resinclar</title>
+  <link rel="stylesheet" href="estilos.css">
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ====== CONTACTO ESPECÍFICO ====== */
+    main.contacto-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 120px 20px 60px;
+      background: #f8f9fa;
+    }
+
+    .tarjeta-contacto {
+      background: #ffffff;
+      padding: 40px 50px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+      animation: aparecerTarjeta 0.8s ease-out;
+    }
+
+    .tarjeta-contacto h2 {
+      color: #0077cc;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    .tarjeta-contacto p {
+      color: #555;
+      margin-bottom: 25px;
+      font-size: 1.05rem;
+    }
+
+    .lista-contacto {
+      list-style: none;
+      padding: 0;
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .lista-contacto li {
+      margin-bottom: 10px;
+    }
+
+    /* Redes Sociales */
+    .redes-sociales {
+      margin-top: 15px;
+    }
+
+    .redes-sociales h3 {
+      color: #0077cc;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    .iconos-redes {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .iconos-redes a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.4rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+    }
+
+    .facebook {
+      background-color: #1877f2;
+    }
+
+    .instagram {
+      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    }
+
+    .whatsapp {
+      background-color: #25D366;
+    }
+
+    .iconos-redes a:hover {
+      transform: scale(1.15);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes aparecerTarjeta {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ==== EFECTO DE APARICIÓN GLOBAL ==== */
+    body {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    body.visible {
+      opacity: 1;
+    }
+
+    /* ==== EFECTO FADE (secciones) ==== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Resinclar Resina Epóxica</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Producto</a>
+      <a href="contacto.html" class="activo">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Clase corregida: "fade-up" en lugar de "fade" -->
+  <main class="contacto-container fade-up">
+    <div class="tarjeta-contacto">
+      <h2>Contáctanos</h2>
+      <p>Estamos aquí para ayudarte con cualquier consulta o información que necesites.</p>
+      
+      <ul class="lista-contacto">
+        <li>📧 contacto@resinclar.cl</li>
+        <li>📱 +56 9 8765 4321</li>
+        <li>📍 Talca, Chile</li>
+      </ul>
+      
+      <div class="redes-sociales">
+        <h3>Síguenos en redes</h3>
+        <div class="iconos-redes">
+          <a href="https://www.facebook.com" target="_blank" class="facebook" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/56987654321" target="_blank" class="whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Resinclar. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
