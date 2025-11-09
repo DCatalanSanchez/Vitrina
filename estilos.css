@@ -1,263 +1,225 @@
-/* ====== RESETEO GENERAL ====== */
+/* ======== RESET ======== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* ====== BODY Y ANIMACIÓN DE FONDO ====== */
+/* ======== GENERAL ======== */
 body {
-  background: linear-gradient(135deg, #f9fafc, #eef1f5);
-  background-size: 200% 200%;
-  animation: fondoMovimiento 25s ease infinite;
-  color: #333;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
   line-height: 1.5;
-  opacity: 0;
-  transition: opacity 0.8s ease;
 }
 
-body.visible {
-  opacity: 1;
-}
-
-@keyframes fondoMovimiento {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
-/* ====== HEADER ====== */
+/* ======== HEADER ======== */
 header {
-  background-color: #1f2937;
-  color: #fff;
-  padding: 20px 0;
+  background: #222;
+  color: white;
+  padding: 20px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-header.scrolled {
-  background-color: #111827;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+header nav {
+  margin-top: 12px;
 }
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-/* ====== NAVBAR ====== */
-nav a {
-  color: #ddd;
+header nav a {
+  color: white;
   text-decoration: none;
-  margin: 0 15px;
-  font-weight: 500;
+  margin: 0 12px;
+  font-weight: bold;
   position: relative;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #fff;
-}
-
-nav a::after {
+header nav a::after {
   content: "";
   position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  bottom: -5px;
   left: 0;
-  background-color: #3b82f6;
+  background-color: #1e90ff;
   transition: width 0.3s;
 }
 
-nav a:hover::after {
+header nav a:hover::after,
+header nav a.activo::after {
   width: 100%;
 }
 
-nav a.activo {
-  color: #3b82f6;
-  font-weight: bold;
+header nav a:hover,
+header nav a.activo {
+  color: #1e90ff;
 }
 
-/* ====== SECCIONES ====== */
+/* ======== TITULOS ======== */
+h2, h3 {
+  text-align: center;
+  width: 100%;
+}
+
+/* ======== QUIENES SOMOS ======== */
+#quienes-somos h2 {
+  margin-bottom: 20px;
+}
+
+.quienes-somos-card {
+  background: white;
+  border-radius: 8px;
+  padding: 25px 30px;
+  max-width: 700px;
+  margin: 20px auto 40px auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ======== MAIN / PRODUCTOS ======== */
 main {
-  padding: 130px 20px 60px 20px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 15px;
 }
 
-/* ====== QUIÉNES SOMOS ====== */
-.nosotros {
-  display: flex;
-  justify-content: center;
-  background: #f9f9f9;
-  margin: 60px 0 40px 0;
-  padding: 60px 20px;
-}
-
-.contenido-nosotros {
-  max-width: 850px;
-  background: #ffffff;
-  padding: 40px 50px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-/* ====== TÍTULO OFERTA DE LA SEMANA ====== */
-.oferta-semana {
-  text-align: center;
-  margin-top: -10px;
-  margin-bottom: 10px;
-}
-
-.titulo-oferta {
-  font-size: 2rem;
-  color: #e63946;
-  font-weight: bold;
-  letter-spacing: 1px;
-  animation: brilloVivo 1.3s infinite ease-in-out;
-  text-shadow: 0 0 10px rgba(230, 57, 70, 0.6);
-  transition: transform 0.2s ease;
-}
-
-.titulo-oferta:hover {
-  transform: scale(1.1);
-  text-shadow: 0 0 20px rgba(230, 57, 70, 0.9);
-}
-
-@keyframes brilloVivo {
-  0% {
-    opacity: 0.8;
-    transform: scale(1);
-    text-shadow: 0 0 8px rgba(230, 57, 70, 0.5);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.07);
-    text-shadow: 0 0 16px rgba(255, 80, 80, 0.9);
-  }
-  100% {
-    opacity: 0.9;
-    transform: scale(1);
-    text-shadow: 0 0 8px rgba(230, 57, 70, 0.5);
-  }
-}
-
-/* ====== PRODUCTOS ====== */
 .productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  width: 100%;
-  max-width: 1100px;
-  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
 }
 
 .producto {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   text-align: center;
-  padding-bottom: 15px;
+  transition: 0.3s;
 }
 
 .producto:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
 }
 
+/* Contenedor para imágenes grandes y uniformes */
 .producto img {
   width: 100%;
-  height: 220px;
-  object-fit: contain;
-  background-color: #f0f0f0;
-  transition: transform 0.3s ease;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 12px;
 }
 
-.producto img:hover {
-  transform: scale(1.05);
+.producto span {
+  display: block;
+  margin: 12px 0;
+  font-weight: bold;
+  color: #333;
 }
 
-/* ====== FOOTER ====== */
+/* ======== BOTÓN WHATSAPP ======== */
+.btn-wsp {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #25D366;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-wsp:hover {
+  background: #1cae56;
+}
+
+/* ======== CONTACTO ======== */
+.contact-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px auto 30px auto;
+  max-width: 400px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.contact-card h3 {
+  margin-bottom: 12px;
+}
+
+.contact-card p {
+  margin-bottom: 8px;
+}
+
+.contact-card a {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-card a:hover {
+  color: #0f68c1;
+}
+
+/* ======== FOOTER ======== */
 footer {
   text-align: center;
-  background-color: #1f2937;
-  color: #bbb;
   padding: 20px;
-  font-size: 0.9rem;
-  margin-top: auto;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
-  width: 100%;
+  margin-top: 30px;
+  background: #222;
+  color: white;
 }
 
-/* ====== EFECTOS DE ENTRADA ====== */
-
-/* Fade simple */
-.fade {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.fade.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Slide-in desde la izquierda */
-.slide-left {
-  opacity: 0;
-  transform: translateX(-60px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.slide-left.visible {
-  opacity: 1;
-  transform: translateX(0);
+/* ======== WHATSAPP FLOTANTE ======== */
+.wsp-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+  transition: 0.3s;
 }
 
-/* Slide-in desde la derecha */
-.slide-right {
-  opacity: 0;
-  transform: translateX(60px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.slide-right.visible {
-  opacity: 1;
-  transform: translateX(0);
+.wsp-flotante img {
+  width: 35px;
+  height: 35px;
 }
 
-/* Zoom-in */
-.zoom-in {
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.zoom-in.visible {
-  opacity: 1;
-  transform: scale(1);
+.wsp-flotante:hover {
+  transform: scale(1.12);
+  background: #1ebe5d;
 }
 
-/* ====== ANIMACIÓN DE ENTRADA GENERAL ====== */
-@keyframes entradaSuave {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+/* ======== RESPONSIVE ======== */
+@media screen and (max-width: 768px) {
+  .productos {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
 
-.animar-entrada {
-  animation: entradaSuave 0.8s ease-out forwards;
-}
+  .producto {
+    width: 90%;
+  }
 
-/* ====== EVITA DESPLAZAMIENTO LATERAL ====== */
-html, body {
-  overflow-x: hidden;
-  overscroll-behavior: none;
+  .producto img {
+    height: 250px;
+  }
 }

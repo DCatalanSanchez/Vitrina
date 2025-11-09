@@ -1,51 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resinclar y Dalekolor | Resina Epóxica y Pinturas Industriales en Chile</title>
+  <link rel="stylesheet" href="estilos.css">
 
   <meta name="description" content="Venta de resina epóxica, pinturas industriales y recubrimientos de alto rendimiento en Chile. Calidad profesional, asesoría técnica y envíos a todo el país.">
-
   <meta name="keywords" content="resina epoxica, comprar resina, pintura dalekolor, resina para mesa, resina arte, resina piso, recubrimientos industriales, esmalte sintético, chile">
 
-  <link rel="stylesheet" href="estilos.css" />
-
-  <!-- Datos estructurados -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "name": "Resinclar y Dalekolor",
-    "url": "https://resinclarYdalekolor.cl",
-    "image": "https://resinclarYdalekolor.cl/img/recinapromo10.jpg",
-    "telephone": "+56982072994",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Santiago",
-      "addressCountry": "CL"
-    },
-    "areaServed": "Chile",
-    "makesOffer": [
-      {
-        "@type": "Product",
-        "name": "Resina Epóxica Secado Rápido",
-        "price": "17000",
-        "priceCurrency": "CLP"
-      },
-      {
-        "@type": "Product",
-        "name": "Pintura Dalekolor 20kg",
-        "price": "68900",
-        "priceCurrency": "CLP"
-      }
-    ]
-  }
-  </script>
 </head>
-
 <body>
   <header>
     <h1>Resina Epóxica y Pinturas Industriales en Chile</h1>
@@ -56,11 +20,15 @@
     </nav>
   </header>
 
-  <section class="nosotros fade-up">
-    <div class="contenido-nosotros">
-      <h2>Quiénes Somos</h2>
-      <p>Somos <strong>Resinclar y Dalekolor</strong>, especialistas en resina epóxica, pinturas industriales y recubrimientos de alto rendimiento para proyectos artesanales, industriales y decorativos.</p>
-      <p>Ofrecemos productos de calidad, asesoría personalizada y envíos a todo Chile.</p>
+  <section id="quienes-somos">
+    <h2>Quiénes Somos</h2>
+    <div class="quienes-somos-card">
+      <p>
+        Somos <strong>Resinclar y Dalekolor</strong>, especialistas en resina epóxica, pinturas industriales y recubrimientos de alto rendimiento para proyectos artesanales, industriales y decorativos.
+      </p>
+      <p>
+        Ofrecemos productos de calidad, asesoría personalizada y envíos a todo Chile.
+      </p>
     </div>
   </section>
 
@@ -71,19 +39,19 @@
   <main>
     <section class="productos fade-up">
       <article class="producto">
-        <img src="img/recinapromo10.jpg" alt="Resina Epóxica de Secado Rápido" />
+        <img src="img/recinapromo10.jpg" alt="Resina Epóxica de Secado Rápido">
         <h3>Resina Epóxica</h3>
         <p>Alta transparencia y secado rápido.</p>
         <span>$15.500 s/iva (1 Kg)</span>
-        <button>Ver Detalles</button>
+        <a class="btn-wsp" href="https://wa.me/56982072994" target="_blank">Comprar por WhatsApp</a>
       </article>
 
       <article class="producto">
-        <img src="img/pinturapromo10.jpg" alt="Pintura Dalekolor 20kg" />
+        <img src="img/pinturapromo10.jpg" alt="Pintura Dalekolor 20kg">
         <h3>Pintura Dalekolor 20Kg</h3>
         <p>Esmalte sintético resistente, acabado brillante.</p>
         <span>$68.900 s/iva (20 Kg)</span>
-        <button>Ver Detalles</button>
+        <a class="btn-wsp" href="https://wa.me/56982072994" target="_blank">Comprar por WhatsApp</a>
       </article>
     </section>
   </main>
@@ -92,6 +60,11 @@
     <p>© 2025 Resinclar y Dalekolor. Todos los derechos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Botón WhatsApp Flotante -->
+  <a href="https://wa.me/56982072994?text=Hola!%20Quiero%20hacer%20una%20consulta%20sobre%20productos." 
+     class="wsp-flotante" 
+     target="_blank" aria-label="WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+  </a>
 </body>
 </html>
