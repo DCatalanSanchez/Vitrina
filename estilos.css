@@ -223,3 +223,49 @@ footer {
     height: 250px;
   }
 }
+/* ======== BOTÓN WHATSAPP DENTRO DE PRODUCTOS ======== */
+.btn-wsp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  background: #25D366;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-wsp:hover {
+  background: #1ebe5d;
+  transform: scale(1.05);
+}
+
+/* ======== BOTÓN WHATSAPP FLOTANTE ======== */
+.wsp-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px 12px rgba(0,0,0,0.3);
+  z-index: 9999;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.wsp-flotante img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.wsp-flotante:hover {
+  background: #1ebe5d;
+  transform: scale(1.12);
+}
