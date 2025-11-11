@@ -176,3 +176,35 @@
   <script src="script.js"></script>
 </body>
 </html>
+/* ======== ESTILO DE TÍTULOS Y SECCIÓN ======== */
+main h2 {
+  margin-bottom: 35px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Espaciado consistente entre productos */
+.producto p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Mejor lectura del precio */
+.producto span {
+  font-size: 17px;
+  color: #111;
+}
+
+/* Efecto al pasar el mouse */
+.producto:hover {
+  box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+}
+
+/* Ajuste general móvil */
+@media screen and (max-width: 480px) {
+  .producto img {
+    height: 210px;
+  }
+}
