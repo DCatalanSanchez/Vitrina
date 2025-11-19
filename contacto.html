@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto - Resinclar</title>
   <link rel="stylesheet" href="estilos.css">
-  <!-- Font Awesome para íconos -->
+
+  <!-- SEO -->
+  <meta name="description" content="Contacto oficial de Resinclar y Dalekolor. Escríbenos para consultas sobre resina epóxica, pinturas industriales y envíos a todo Chile. Atención rápida por WhatsApp.">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    /* ====== CONTACTO ESPECÍFICO ====== */
     main.contacto-container {
       min-height: 100vh;
       display: flex;
@@ -55,7 +59,6 @@
       margin-bottom: 10px;
     }
 
-    /* Redes Sociales */
     .redes-sociales {
       margin-top: 15px;
     }
@@ -85,17 +88,9 @@
       text-decoration: none;
     }
 
-    .facebook {
-      background-color: #1877f2;
-    }
-
-    .instagram {
-      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
-    }
-
-    .whatsapp {
-      background-color: #25D366;
-    }
+    .facebook { background-color: #1877f2; }
+    .instagram { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); }
+    .whatsapp { background-color: #25D366; }
 
     .iconos-redes a:hover {
       transform: scale(1.15);
@@ -107,7 +102,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ==== EFECTO DE APARICIÓN GLOBAL ==== */
     body {
       opacity: 0;
       transition: opacity 0.5s ease;
@@ -117,7 +111,6 @@
       opacity: 1;
     }
 
-    /* ==== EFECTO FADE (secciones) ==== */
     .fade-up {
       opacity: 0;
       transform: translateY(20px);
@@ -129,6 +122,24 @@
       transform: translateY(0);
     }
   </style>
+
+  <!-- SCHEMA: Contact Page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contacto Resinclar y Dalekolor",
+    "description": "Página de contacto oficial de Resinclar y Dalekolor.",
+    "url": "https://tusitio.cl/contacto.html",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+56982072994",
+      "contactType": "customer service",
+      "availableLanguage": ["es"]
+    }
+  }
+  </script>
+
 </head>
 
 <body>
@@ -136,7 +147,7 @@
     <h1>Resinclar Resina Epóxica</h1>
     <nav>
       <a href="index.html">Inicio</a>
-      <a href="productos.html">Producto</a>
+      <a href="productos.html">Productos</a>
       <a href="contacto.html" class="activo">Contacto</a>
     </nav>
   </header>
@@ -149,7 +160,7 @@
       <ul class="lista-contacto">
         <li>📧 resiclaydalekolor@gmail.com</li>
         <li>📱 +56982072994</li>
-        <li>📍 Quinta Normal,Santiago, Chile</li>
+        <li>📍 Quinta Normal, Santiago, Chile</li>
       </ul>
       
       <div class="redes-sociales">
@@ -161,7 +172,7 @@
           <a href="https://www.instagram.com/resiclarydalekolor/" target="_blank" class="instagram" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://wa.me/+56982072994" target="_blank" class="whatsapp" aria-label="WhatsApp">
+          <a href="https://wa.me/56982072994" target="_blank" class="whatsapp" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
           </a>
         </div>
@@ -176,4 +187,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
